@@ -1,0 +1,413 @@
+ .superMain{
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+ .slider {
+    background-color: blue;
+    width: 25%;
+    height: 100vh;
+    position: fixed; /* Absolute ki jagah Fixed behtar rehta hai sidebar ke liye */
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: left 0.3s ease; /* Animation ke liye */
+    z-index: 99;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.userImag {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 500px ki jagah 50% behtar hai circle ke liye */
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: blue;
+    transition: all 0.3s ease;
+}
+
+.username {
+    color: white;
+    margin-top: 10px;
+    font-size: 1.5em;
+    display: block; /* Desktop par dikhega */
+}
+
+.nav {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Items ko upar rakhne ke liye */
+}
+
+.nav ul {
+    padding: 0;
+    text-align: center;
+}
+
+.nav > ul > li {
+    color: white;
+    padding: 1em;
+    list-style: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.logOut {
+    
+    width: 60%;
+    height: 50px; /* Fixed height behtar hai % se */
+    background: #111729;
+    border-radius: 23px;
+    border: 2px solid #00ffff;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size:medium;
+}
+
+/* Hamburger Icon Styles (Default hidden) */
+.hamburger {
+    display: none; /* Desktop par nahi dikhega */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.innerContainer {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px; /* Space between cards */
+}
+
+/* Base Card Style Override */
+.card {
+    width: 50%;
+
+    height: 40%; 
+    border-radius: 2em;
+    padding: 2em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --- Card 1 Specifics (Blue) --- */
+.card1 {
+    background-color: #242695; /* Exact Blue from image */
+    color: white;
+    align-items: flex-start;
+}
+
+
+.card-content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.icon-box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 5px 0 10px 0;
+}
+
+.pill-badge {
+    background-color: #1a1b3a; /* Darker blue pill */
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.card-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+    height: 100%;
+    margin-right: 2em;
+}
+
+.stat-group h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+}
+
+.stat-group p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- Card 2 Specifics (White) --- */
+.card2 {
+    background-color: #f5f5f5; /* Off-white */
+    color: black;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-title {
+    color: #000;
+    font-weight: 400;
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.5em;
+}
+
+.invoice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.invoice-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invoice-item .info h3 {
+    color: #000;
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.invoice-item .info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.status-badge {
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.status-badge.paid {
+    background-color: #dcdcdc; /* Grayish */
+    color: #000;
+}
+
+.status-badge.late {
+    background-color: #dcdcdc;
+    color: #000;
+}
+
+
+ .blur{
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+    z-index: 100;
+    position: fixed;
+}
+.notification-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 606px; /* Figma size */
+    min-height: 383px; /* Figma size */
+    border-radius: 40px;
+    border: 1px solid #d1d1d1;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+    z-index: 110;
+    margin: 2em;
+    position: fixed;
+}
+
+.icon-container {
+display: flex;
+justify-content: center;
+align-items: center;
+width: auto;
+height: 120px;
+
+
+}
+
+.status-img {
+    
+ max-width: 50%;
+  max-height: 100%;
+  object-fit: contain;    
+   
+
+}
+
+.title-small {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.title-main {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.verify-btn {
+    background: linear-gradient(90deg, #5b4ef3, #5445e5); /* Gradient as requested */
+    color: white;
+    border: none;
+    padding: 15px 0;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.verify-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+/* ----MObile screen (jub screen 1440 px per jay gi 2k ky li ) */
+@media screen and (min-width: 1440px){
+    .card{
+        height: 30%;
+    }
+}
+
+/* --- Mobile Styles (Jab screen 768px ya usse kam ho) --- */
+@media (max-width: 768px) {
+    .innerContainer {
+        width: 100%;
+    }
+    .card{
+        width: 90%;
+
+    } 
+.contact {
+        width: 80%;
+    }   
+    /* Hamburger dikhao */
+    .hamburger {
+        display: block;
+    }
+
+    /* Slider ko screen se bahar bhejo */
+    .slider {
+        left: -100%; /* Screen ke left side chupa diya */
+        width: 250px; /* Mobile par width fix pixels mein behtar hai */
+    }
+
+    /* Jab JS se 'active' class add hogi tab slider wapas aayega */
+    .slider.active {
+        left: 0;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* User Image Choti karni hai */
+    .userImag {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+    }
+    
+    .username {
+        font-size: 1.2em;
+    }
+
+    .nav {
+        height: auto;
+        margin-bottom: 20px;
+    }
+        .title-main {
+        font-size: 28px;
+    }
+    .title-small {
+        font-size: 24px;
+    }
+    .description {
+        font-size: 14px;
+    }
+    .notification-card {
+        padding: 30px 15px;
+        border-radius: 25px;
+    }
+    
+}
+.openBlur{
+    filter: none;
+ }
+ .notify_open{
+    display: none;
+ }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/utilitystyle.css">
+    <link rel="stylesheet" href="../assets/css/optVerification.css">
+    <title>Auth System-Opt Varifictaion</title>
+</head>
+<body>
+        <div class="main">
+            <div class="mainSection">
+        <div class="content_container">
+            <h1>Verify your OTP</h1>
+            <p>enter the one-time password you received via<br>email into the required field </p>
+            <form action="#">
+                <div class="otp_container">
+                    <input type="text"  class="otpInput" id="otpInput1"  maxlength="1">
+                    <input type="text" class="otpInput" id="otpInput2"   maxlength="1">
+                    <input type="text" class="otpInput" id="otpInput3"  maxlength="1">
+                    <input type="text" class="otpInput" id="otpInput4"  maxlength="1">
+                </div>
+               
+            <button type="button" class="main_button" onclick="verifyOtp()">continue</button>
+            <button type="button" class="otpResend_Button main_button" onclick="resendOtp()">Send Again</button>
+        </form>
+            </div></div>
+            <footer class="footer_container"> <span>Copyright 2025 @awaisMaqbool-dev</span><span class="policy"><p>Privacy Policy</p><p>Terms & Conditions</p></span></footer>
+
+
+        <div class="elips ellips1"></div>
+        <div class="elips ellips2"></div>
+    </div>
+    <script src="../assets/js/otpVerification.js"></script>
+</body>
+</html>

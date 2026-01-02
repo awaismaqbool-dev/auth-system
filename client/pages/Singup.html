@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/utilitystyle.css">    
+<link rel="stylesheet" href="../assets/css/signup.css">
+    <title>Auth System-SigUp</title>
+</head>
+<body>
+        <div class="main">
+            <div class="mainSection">
+        <div class="content_container">
+            <h1>Sign Up For Free.</h1>
+            <p>get you personal Dashboard </p>
+            <form id="signupForm" onsubmit="sendData(event)">
+               <div class="input_sec"><label for="userName">Full Name <br><input 
+                id="userName" type="text" name="fullName" placeholder="Enter your Full Name " class="inputBar"></label></div>
+               <div class="input_sec"><label for="userEmail">Email <br><input 
+              id="userEmail"  type="email" name="email" placeholder="Enter your Email" class="inputBar"></label></div>
+               <div class="input_sec"><label for="userPassword">Password<br><input 
+             id="userPassword"   type="password" name="password" placeholder="Enter your password" class="inputBar" ></label></div>
+               <div class="passwordChecker">
+                <div class="line1  "></div><div class="line2  " ></div><div class="line3  "></div>
+               </div>
+               <span class="passwordStrength">Password Strenght: <p id="passwordStatus" ></p> </span>
+            <button type="submit" class="main_button">Sign In <img src="../assets/images/sign in icon svg.svg" alt=""></button></form>
+            <span class="Sing_In_Link">Already have an account?<a href="../pages/login.html">Sign In</a></span>
+            <button class="google_sing_in main_button"><img src="../assets/images/devicon_google.svg" alt="google">Sign In With Google</button>
+            </div></div>
+            <footer class="footer_container"> <span>Copyright 2025 @awaisMaqbool-dev</span><span class="policy"><p>Privacy Policy</p><p>Terms & Conditions</p></span></footer>
+
+
+        <div class="elips ellips1"></div>
+        <div class="elips ellips2"></div>
+    </div>
+    <script src="../assets/js/signUp.js"></script>
+</body>
+</html>

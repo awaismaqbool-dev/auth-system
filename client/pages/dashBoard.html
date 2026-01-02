@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/utilitystyle.css">
+    <link rel="stylesheet" href="../assets/css/dashBoard.css">
+    <title>Auth System- Dashboard</title>
+</head>
+<body>
+    <div class="superMain">
+    <div class="notification-card ">
+        <div class="icon-container">
+            <img src="../assets/images/not_verified_iocn.png" alt="Status Icon" class="status-img">
+        </div>
+
+        <h2 class="title-small">Whoops!</h2>
+        <h1 class="title-main">Your Are Not Verified.</h1>
+        
+        <p class="description">
+            Please Click The 'Verify' Button And Retrieve The <br> 
+            OTP Sent To Your Email.
+        </p>
+
+        <button class="verify-btn" onclick="sendOtpVerify()">Verify</button>
+    </div>
+    <div class="blur ">
+    <div class="main">
+        <div class="container"> 
+            <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="slider" id="mySlider">
+    <div class="profile-section">
+        <div class="userImag">U</div>
+        <h3 id="userName" class="username">User</h3>  <!-- Added id="userName" -->
+    </div>
+
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>Projects</li>
+            <li>Income</li>
+            <li>Invoices</li>
+        </ul>
+    </div>
+    <button class="logOut" id="logoutButton">LOGOUT</button>
+</div>
+            
+                <!-- <div class="innerContainer">
+            <div class="card card1"></div>
+                <div class="card card2"></div>
+
+            </div> </div>-->
+        <div class="innerContainer">
+    <div class="card card1">
+        <div class="card-content-left">
+            <div class="icon-box">
+              <img src="../assets/images/coins.svg" alt="">
+            </div>
+            
+            <p class="label">Earnings</p>
+            <h1 class="amount">€8,350</h1>
+            
+            <div class="pill-badge">
+                Last Month Earning 10%
+            </div>
+        </div>
+
+        <div class="card-content-right">
+            <div class="stat-group">
+                <h3>Rank In Top</h3>
+                <p>In Top 20%</p>
+            </div>
+            <div class="stat-group">
+                <h3>Projects</h3>
+                <p>8 Projects Upload In Month</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card2">
+        <h2 class="card-title">Recent Invoices</h2>
+        
+        <div class="invoice-list">
+            <div class="invoice-item">
+                <div class="info">
+                    <h3>John Philips</h3>
+                    <p>€ 1,200.87</p>
+                </div>
+                <div class="status-badge paid">Paid</div>
+            </div>
+
+            <div class="invoice-item">
+                <div class="info">
+                    <h3>John Philips</h3>
+                    <p>€ 1,200.87</p>
+                </div>
+                <div class="status-badge late">Late</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        <div class="elips ellips1"></div>
+        <div class="elips ellips2"></div>
+    </div>
+    </div>
+</div>
+    </div>
+    <script src="../assets/js/dashBoard.js"></script>
+</body>
+</html>
