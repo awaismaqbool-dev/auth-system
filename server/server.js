@@ -30,9 +30,8 @@ const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
-// console.log(__dirname);
-// frontend static files
 
+// frontend static files
 app.use(express.static(path.join(__dirname, "../client")));
 
 app.get("/dashBoard", authMiddelwear, (req, res) => {

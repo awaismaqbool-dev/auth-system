@@ -26,7 +26,7 @@ A complete authentication system with:
 - Protected routes using JWT
 
 ## Demo Video
-👉 [Screen Recording Link Here]
+👉  (https://drive.google.com/file/d/1sOHZO_T1gREbBMmAgJVAnOIlxW2louMo/view?usp=drive_link)
 - User registration
 - OTP received on email
 - OTP verification

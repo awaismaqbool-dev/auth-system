@@ -183,9 +183,6 @@ export const verifyEmail = async (req, res) => {
     user.isAccountVerified = true;
     user.verifyotp = "";
     user.verifyotpExpireAt = 0;
-    user.resetOtp = "";
-    user.resetOtpExpireAt = 0;
-
     await user.save();
     return res.json({ success: true, message: "Your Acount is varified" });
   } catch (error) {
@@ -256,8 +253,6 @@ export const verifyotpForget = async (req, res) => {
     }
     user.verifyotp = "";
     user.verifyotpExpireAt = 0;
-    user.resetOtp = "";
-    user.resetOtpExpireAt = 0;
     await user.save();
     return res.json({ success: true, message: "OTP matched" });
   } catch (error) {
@@ -281,8 +276,6 @@ export const changePassword = async (req, res) => {
     }
     const hashedPassword = await bcryptjs.hash(password, 13);
     user.password = hashedPassword;
-    user.resetOtp = "";
-    user.resetOtpExpireAt = 0;
     await user.save();
     res.clearCookie("token", {
       httponly: true,
@@ -299,85 +292,6 @@ export const changePassword = async (req, res) => {
 };
 
 
-//send new Otp funtion
-// export const resendOtp = async (req, res) => {
-//   try {
-//     const userId = req.userId;
-
-//     const user = await userModel.findById(userId);
-//     if (!user) {
-//       return res.json({ success: false, message: "User not found" });
-//     }
-
-//     if (user.isAccountVerified) {
-//       return res.json({ success: false, message: "User Already verified" });
-//     }
-//    user.verifyotp = String(Math.floor(1000 + Math.random() * 9000));
-//     user.verifyotpExpireAt = Date.now() + 2 * 60 * 60 * 1000;
-//     await user.save();
-//     //nodemailer
-//     const mailInfo = {
-//       from: process.env.SENDER_EMAIL, // sender address
-//       to: user.email, // list of receivers
-//       subject: "Email Verfication", // Subject line
-//       text: `For Verification your OPT is :  ${user.verifyotp}  
-//       please put OPT in verfiy your account `, // plain text body
-//     };
-//     const info = await transporter.sendMail(mailInfo);
-//     console.log("Message ID:", info.messageId);
-//     console.log("Preview URL:", nodemailer.getTestMessageUrl(info));
-//     res.json({ success: true, message: "OTP sent successfully" });
-//     //
-//   } catch (error) {
-//     res.json({ success: false, message: error.message });
-//   }
-// };
-
-// // verify account with new otp
-// export const verifyEmail_newOtp = async (req, res) => {
-//   const userId = req.userId;
-//   const { otp } = req.body;
-//   if (!userId || !otp) {
-//     return res.json({ success: false, message: "Missing Deatails" });
-//   }
-//   try {
-//     const user = await userModel.findById(userId);
-//     if (user.isAccountVerified) {
-//       return res.json({
-//         success: false,
-//         message: "Your Acount is already varified",
-//       });
-//     }
-//     if (!user) {
-//       return res.json({
-//         success: false,
-//         message: "user not found please login again",
-//       });
-//     }
-//     if (otp === "" || otp !== user.verifyotp || user.verifyotp === "") {
-//       return res.json({
-//         success: false,
-//         message: "wrong OTP please put correct otp ",
-//       });
-//     }
-//     if (user.verifyotpExpireAt < Date.now()) {
-//       return res.json({
-//         success: false,
-//         message: "OTP has time out. Resend again",
-//       });
-//     }
-//     user.isAccountVerified = true;
-//     user.verifyotp = "";
-//     user.verifyotpExpireAt = 0;
-//     user.resetOtp = "";
-//     user.resetOtpExpireAt = 0;
-
-//     await user.save();
-//     return res.json({ success: true, message: "Your Acount is varified" });
-//   } catch (error) {
-//     res.json({ success: false, message: error.message });
-//   }
-// };
 
 
 
