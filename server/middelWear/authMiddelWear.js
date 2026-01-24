@@ -23,10 +23,5 @@ try {
 };
 export default authMiddelwear;
 
-//     if (tokenDecoded.id) {
-       
-//     } else {
-//         return res.json({ success: false, message: "Not Authorized please Login agian"});  
-// }
 
 
